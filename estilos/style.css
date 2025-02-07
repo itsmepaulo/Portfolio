@@ -112,7 +112,7 @@
     .projetos__card{
         display: flex;
         flex-direction: column;
-        width: 30%;
+        width: 47%;
         height: 100px;
         border: 3px solid var(--cor-terciaria);
         border-radius: 5px;
