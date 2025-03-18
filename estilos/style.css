@@ -172,26 +172,20 @@
     }
 
  
-    .projetos__card-modal{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        align-items: center;
+    .modal__button-close{
+        padding: 10px;
         background-color: #E478FF;
-
+        font-family: var(--fonte-conteudo);
+        color: #000080;
+        border: 2px solid #000080;
+        border-radius: 5px;
+        font-weight: bold;
     }
 
-    .projetos__card-modal > p{
-        text-align: center;
-        font-family: var(--fonte-titulo);
-        padding-top: 2px;
-    }
-
-    .projetos__card-modal > img{
-        width: 100% ;
-        height: 100%;
-       
+    .modal__button-close:hover{
+        transition: 0.8s;
+        color: #8CE994;
+        border: 2px solid #8CE994;
     }
 
     /* TÉRMINO DO MODAL */
