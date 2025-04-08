@@ -264,9 +264,14 @@
 
     @media (min-width:1200px) {
 
-        header {
-            padding: 3% 5%;
-
+        .idiomas {
+            background-color: var(--cor-primaria);
+            text-align: end;
+        }
+    
+        .img-language {
+            width: 2%;
+            cursor: pointer;
         }
 
         .navegacao {
