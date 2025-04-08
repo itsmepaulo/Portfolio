@@ -1,57 +1,64 @@
-    @charset "UTF-8"; 
+    @charset "UTF-8";
     @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
-    :root{
+
+    :root {
         --cor-primaria: #E478FF;
         --cor-secundaria: #000080;
-        --cor-terciaria: #8CE994 ;
+        --cor-terciaria: #8CE994;
         --fonte-titulo: "Krona One", sans-serif;
         --fonte-conteudo: "Montserrat", "sans-serif";
     }
 
-    *{
-        padding:0;
+    * {
+        padding: 0;
         margin: 0;
     }
 
-    html, body{
+    html,
+    body {
         margin: 0;
         padding: 0;
         background-color: var(--cor-primaria);
-        
+
     }
 
-    body{
-        
+    body {
+
         height: 100vh;
         width: 98.7vw;
-        box-sizing: border-box; /*Isso garante que a largura e altura dos elementos filhos sejam calculadas incluindo bordas e paddings, evitando que eles ultrapassem os limites do body.*/
+        box-sizing: border-box;
+        /*Isso garante que a largura e altura dos elementos filhos sejam calculadas incluindo bordas e paddings, evitando que eles ultrapassem os limites do body.*/
     }
 
-    header{
-        padding: 3% 5%;
-
+    .idiomas {
+        background-color: var(--cor-primaria);
+        text-align: end;
     }
 
+    .img-language {
+        width: 2%;
+        cursor: pointer;
+    }
 
-    main.apresentacao{
-        display: flex; 
+    main.apresentacao {
+        display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content:space-between;
-        padding: 5%;
+        justify-content: space-between;
+        padding: 2%;
         gap: 82px;
         background-color: var(--cor-primaria);
     }
 
-    .conteudo{
+    .conteudo {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 30px; 
+        gap: 30px;
     }
 
-    .conteudo__container{
+    .conteudo__container {
         gap: 20px;
         display: flex;
         flex-direction: column;
@@ -60,32 +67,33 @@
         /* height: 90vh; adicionar esse comando no media querye para telas maiores. */
     }
 
-    
-    .conteudo__img{
-        width: 60%; /* Essa porcentagem é aplicada na imagem como parâmetro a tag pai, que no caso é a main*/
+
+    .conteudo__img {
+        width: 60%;
+        /* Essa porcentagem é aplicada na imagem como parâmetro a tag pai, que no caso é a main*/
         border-radius: 100%;
         border: 4px solid var(--cor-secundaria);
     }
 
-    .container__descricao{
+    .container__descricao {
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: center;
     }
 
-    .descricao__titulo{
+    .descricao__titulo {
         color: var(--cor-secundaria);
         font-size: 2.25rem;
         font-family: var(--fonte-titulo);
     }
 
-    .destaque{
+    .destaque {
         color: var(--cor-terciaria);
-    }   
+    }
 
 
-    .descricao__texto{
+    .descricao__texto {
         font-family: var(--fonte-conteudo);
         font-weight: 400;
         line-height: 24px;
@@ -96,14 +104,14 @@
 
 
 
-    .projetos__titulo{
+    .projetos__titulo {
         font-size: 1.50rem;
         font-family: var(--fonte-titulo);
         color: var(--cor-secundaria);
 
     }
 
-    .container__projetos{
+    .container__projetos {
         margin: auto;
         flex-wrap: wrap;
         display: flex;
@@ -111,7 +119,7 @@
         align-items: center;
     }
 
-    .projetos__card{
+    .projetos__card {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -120,7 +128,7 @@
         background-color: #E478FF;
     }
 
-    .test{
+    .test {
         display: flex;
         flex-direction: column;
         width: 47%;
@@ -131,26 +139,26 @@
         text-decoration: none;
     }
 
-    .test:hover{
+    .test:hover {
         transition: 1s;
         border: 3px solid var(--cor-secundaria);
     }
 
-    .projetos__card > p{
+    .projetos__card>p {
         text-align: center;
         font-family: var(--fonte-titulo);
         padding-top: 2px;
     }
 
-    .projetos__card > img{
-        width: 100% ;
+    .projetos__card>img {
+        width: 100%;
         height: 100%;
-       
+
     }
 
 
     /* MODAL */
-    .teste{
+    .teste {
         color: var(--cor-secundaria);
         text-decoration: none;
         cursor: pointer;
@@ -158,48 +166,54 @@
         margin-left: auto;
         font-size: 1rem;
         font-weight: bolder;
-    }   
+    }
 
-    .teste:hover{
+    .teste:hover {
         color: var(--cor-terciaria);
         transition: 0.8s;
     }
 
     /* ALTERAR NAS TELAS MAIORES */
-    .modal-body{
+    .modal-body {
         display: flex;
         gap: 3px;
     }
 
- 
-    .modal__button-close{
-        padding: 10px;
+
+    .projetos__card-modal {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-items: center;
         background-color: #E478FF;
-        font-family: var(--fonte-conteudo);
-        color: #000080;
-        border: 2px solid #000080;
-        border-radius: 5px;
-        font-weight: bold;
+
     }
 
-    .modal__button-close:hover{
-        transition: 0.8s;
-        color: #8CE994;
-        border: 2px solid #8CE994;
+    .projetos__card-modal>p {
+        text-align: center;
+        font-family: var(--fonte-titulo);
+        padding-top: 2px;
+    }
+
+    .projetos__card-modal>img {
+        width: 100%;
+        height: 100%;
+
     }
 
     /* TÉRMINO DO MODAL */
 
-    .links{
+    .links {
         display: flex;
         justify-content: space-between;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         gap: 20px;
-        
+
     }
 
-    .links > h2{
+    .links>h2 {
         color: var(--cor-secundaria);
         text-align: center;
         font-family: var(--fonte-titulo);
@@ -207,7 +221,7 @@
 
     }
 
-    .redes{
+    .redes {
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -224,7 +238,7 @@
         font-size: 1.3rem;
     }
 
-    .redes:hover{
+    .redes:hover {
         color: var(--cor-terciaria);
         transition: 0.8s;
     }
@@ -234,65 +248,65 @@
 
 
 
-    footer{
+    footer {
         padding: 10px 30px;
         text-align: center;
         background-color: var(--cor-terciaria);
         font-family: var(--fonte-conteudo);
         font-weight: bold;
-        
+
     }
 
-    footer > p > a{
+    footer>p>a {
         text-decoration: none;
         color: var(--cor-primaria);
     }
 
     @media (min-width:1200px) {
 
-        header{
+        header {
             padding: 3% 5%;
-    
+
         }
-    
-        .navegacao{
+
+        .navegacao {
             display: flex;
             gap: 30px;
-            
+
         }
-    
-    
-        .navegacao > a{
+
+
+        .navegacao>a {
             color: var(--cor-terciaria);
             font-size: 1.5rem;
             text-decoration: none;
             font-family: var(--fonte-conteudo);
             font-weight: 600;
-    
+
         }
-    
-        .navegacao a:hover{
+
+        .navegacao a:hover {
             color: var(--cor-secundaria);
-            transition: 0.8s ;
+            transition: 0.8s;
         }
-    
-        main.apresentacao{
-            display: flex; 
+
+        main.apresentacao {
+            display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content:space-between;
+            justify-content: space-between;
             padding: 5%;
             gap: 82px;
         }
-    
-        .conteudo{
+
+        .conteudo {
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 30px; 
+            gap: 30px;
         }
-    
-        .conteudo__container{
+
+        .conteudo__container {
             gap: 20px;
             display: flex;
             flex-direction: row;
@@ -300,19 +314,19 @@
             align-items: center;
             height: 100vh;
         }
-    
-        .descricao__titulo{
+
+        .descricao__titulo {
             color: var(--cor-secundaria);
             font-size: 2.25rem;
             font-family: var(--fonte-titulo);
         }
-    
-        .destaque{
+
+        .destaque {
             color: var(--cor-terciaria);
-        }   
-    
-    
-        .descricao__texto{
+        }
+
+
+        .descricao__texto {
             font-family: var(--fonte-conteudo);
             font-weight: 400;
             line-height: 24px;
@@ -322,14 +336,14 @@
         }
 
 
-        .projetos__titulo{
+        .projetos__titulo {
             font-size: 1.50rem;
             font-family: var(--fonte-titulo);
             color: var(--cor-secundaria);
-            
+
         }
 
-        .test{
+        .test {
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -339,10 +353,10 @@
             border-radius: 5px;
             align-items: center;
             text-decoration: none;
-            
+
         }
 
-        .projetos__card{
+        .projetos__card {
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -350,36 +364,39 @@
             align-items: center;
             background-color: #E478FF;
         }
-    
-        .projetos__card > p{
+
+        .projetos__card>p {
             text-align: center;
             font-size: 1.3rem;
-            
+
         }
-    
-        .projetos__card > img{
-            width: 100% ;
+
+        .projetos__card>img {
+            width: 100%;
             height: 100%;
-           
+
         }
-        .links{
+
+        .links {
             display: flex;
             justify-content: space-between;
-            flex-direction: column; /* Por padrão ao inserir o display flex, o flex-direction vem como row */
-            align-items: center;  /*como alteramos o fflex direction para colunas (vertical), a tag align items também é alterada, sendo assim posicionando os itens verticalmente*/
+            flex-direction: column;
+            /* Por padrão ao inserir o display flex, o flex-direction vem como row */
+            align-items: center;
+            /*como alteramos o fflex direction para colunas (vertical), a tag align items também é alterada, sendo assim posicionando os itens verticalmente*/
             gap: 20px;
-            
+
         }
-    
-        .links > h2{
+
+        .links>h2 {
             color: var(--cor-secundaria);
             text-align: center;
             font-family: var(--fonte-titulo);
             font-size: 1.5rem;
-    
+
         }
-    
-        .redes{
+
+        .redes {
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -395,31 +412,32 @@
             text-decoration: none;
             font-size: 1.3rem;
         }
-    
-        .redes:hover{
+
+        .redes:hover {
             color: var(--cor-terciaria);
             transition: 0.8s;
         }
-    
-    
-    
-    
-        .conteudo__img{
-            width: 35%; /* Essa porcentagem é aplicada na imagem como parâmetro a tag pai, que no caso é a main*/
+
+
+
+
+        .conteudo__img {
+            width: 35%;
+            /* Essa porcentagem é aplicada na imagem como parâmetro a tag pai, que no caso é a main*/
             border-radius: 100%;
             border: 4px solid var(--cor-terciaria);
         }
-    
-        footer{
+
+        footer {
             padding: 10px 30px;
             text-align: center;
             background-color: var(--cor-terciaria);
             font-family: var(--fonte-conteudo);
             font-weight: bold;
-            
+
         }
-    
-        footer > p > a{
+
+        footer>p>a {
             text-decoration: none;
             color: var(--cor-secundaria);
         }
